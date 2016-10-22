@@ -22,22 +22,22 @@ class BookTableViewCell: UITableViewCell {
         // configure titleLabel
         contentView.addSubview(nameLabel)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.leadingAnchor.constraintEqualToAnchor(marginGuide.leadingAnchor).active = true
-        nameLabel.topAnchor.constraintEqualToAnchor(marginGuide.topAnchor).active = true
-        nameLabel.trailingAnchor.constraintEqualToAnchor(marginGuide.trailingAnchor).active = true
+        nameLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         nameLabel.numberOfLines = 0
         nameLabel.font = UIFont(name: "AvenirNext-DemiBold", size: 16)
         
         // configure authorLabel
         contentView.addSubview(detailLabel)
         detailLabel.translatesAutoresizingMaskIntoConstraints = false
-        detailLabel.leadingAnchor.constraintEqualToAnchor(marginGuide.leadingAnchor).active = true
-        detailLabel.bottomAnchor.constraintEqualToAnchor(marginGuide.bottomAnchor).active = true
-        detailLabel.trailingAnchor.constraintEqualToAnchor(marginGuide.trailingAnchor).active = true
-        detailLabel.topAnchor.constraintEqualToAnchor(nameLabel.bottomAnchor).active = true
+        detailLabel.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor).isActive = true
+        detailLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
+        detailLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
+        detailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
         detailLabel.numberOfLines = 0
         detailLabel.font = UIFont(name: "Avenir-Book", size: 12)
-        detailLabel.textColor = UIColor.lightGrayColor()
+        detailLabel.textColor = UIColor.lightGray
     }
     
     required init?(coder aDecoder: NSCoder) {
